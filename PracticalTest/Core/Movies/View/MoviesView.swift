@@ -12,20 +12,26 @@ struct MoviesView: View {
     
     var body: some View {
         ZStack {
-            ScrollView() {
-                VStack {
-                    if let movies = vm.movieList?.results {
-                        ForEach(movies, id: \.id) { movie in
-                            MovieRowView(movie: movie)
+            if let movies = vm.movieList {
+                List(movies, id: \.id) { movie in
+                    MovieRowView(movie: movie)
+                        .onAppear() {
+                            DispatchQueue.global().sync {
+                                if movie.id == movies.last?.id {
+                                    vm.goNext()
+                                }
+                            }
                         }
-                    }
-                    
-                    
                 }
-                .padding()
+                .listStyle(PlainListStyle())
+            } else {
+                NoDataView()
             }
             
         }
+//        .searchable(text: $vm.searchText)
+        .searchable(text: $vm.searchText, prompt: "Search Something")
+        .navigationTitle("Movie List")
     }
 }
 

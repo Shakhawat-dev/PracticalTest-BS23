@@ -10,6 +10,9 @@ import Combine
 
 class NetworkManager {
     
+    /// This method is used for donwloading JSON data
+    /// - Parameter url: URL must be provided
+    /// - Returns: Data and Error
     static func download(url: URL) -> AnyPublisher<Data, Error> {
         return URLSession.shared.dataTaskPublisher(for: url)
             .subscribe(on: DispatchQueue.global(qos: .default))

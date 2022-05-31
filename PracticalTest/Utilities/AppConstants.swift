@@ -14,7 +14,7 @@ struct AppConstants {
     static private let imageBaseUrl = "https://image.tmdb.org"
     
     // Query Paths
-    static let search = baseUrl + version + "/search/movie?api_key=\(api_key)&query=marvel"
+    static let search = baseUrl + version + "/search/movie?api_key=\(api_key)"
     
     // Image URLs
     static let imageW500Url = imageBaseUrl + "/t/p/w500"

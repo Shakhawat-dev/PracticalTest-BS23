@@ -9,7 +9,6 @@ import Foundation
 import Combine
 
 class MovieDbService {
-//    @Published var movieList: [MovieModel] = []
     @Published var movieResponse: ResponseModel<MovieModel>?
     
     var movieSubscription: AnyCancellable?
@@ -18,8 +17,14 @@ class MovieDbService {
         self.getCoins()
     }
     
-    private func getCoins() {
-        guard let url = URL(string: AppConstants.search) else { return }
+    func getCoins(query: String = "marvel", page: Int = 1) {
+        if query.isEmpty {
+            return
+        }
+        
+        guard var url = URL(string: AppConstants.search) else { return }
+        url.appendQueryItem(name: "query", value: "\(query)")
+        url.appendQueryItem(name: "page", value: String(page))
         
         movieSubscription = NetworkManager.download(url: url)
             .decode(type: ResponseModel<MovieModel>.self, decoder: JSONDecoder())

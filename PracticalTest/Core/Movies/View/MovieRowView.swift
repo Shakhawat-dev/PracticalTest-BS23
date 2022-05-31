@@ -11,10 +11,20 @@ struct MovieRowView: View {
     var movie: MovieModel?
     
     var body: some View {
-        HStack {
+        HStack() {
             if let movie = movie {
-                ImageLoaderView(url: AppConstants.imageW500Url + (movie.posterPath ?? ""))
-                    .frame(width: 64, height: 128)
+                if let path = movie.posterPath {
+                    ImageLoaderView(url: AppConstants.imageW500Url + path)
+                        .frame(width: 64, height: 128)
+                } else {
+                    Image(systemName: "questionmark")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(Color.gray)
+                        .frame(width: 64, height: 128)
+                }
+                
+                    
                 
                 VStack(alignment: .leading) {
                     Text(movie.title ?? "")

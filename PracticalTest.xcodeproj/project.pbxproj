@@ -22,6 +22,8 @@
 		A17B7F03284652600002C11F /* ImageLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B7F02284652600002C11F /* ImageLoaderView.swift */; };
 		A17B7F052846527D0002C11F /* ImageLoaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B7F042846527D0002C11F /* ImageLoaderViewModel.swift */; };
 		A17B7F07284654070002C11F /* ImageLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B7F06284654070002C11F /* ImageLoaderService.swift */; };
+		A17B7F0B28466C740002C11F /* UrlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B7F0A28466C740002C11F /* UrlExtension.swift */; };
+		A17B7F0D28467ADC0002C11F /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B7F0C28467ADC0002C11F /* NoDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		A17B7F02284652600002C11F /* ImageLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderView.swift; sourceTree = "<group>"; };
 		A17B7F042846527D0002C11F /* ImageLoaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderViewModel.swift; sourceTree = "<group>"; };
 		A17B7F06284654070002C11F /* ImageLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderService.swift; sourceTree = "<group>"; };
+		A17B7F0A28466C740002C11F /* UrlExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlExtension.swift; sourceTree = "<group>"; };
+		A17B7F0C28467ADC0002C11F /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 		11B8AF572846293A005AFB41 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				A17B7F0928466C5B0002C11F /* Extensions */,
 				11B8AF5828462979005AFB41 /* AppConstants.swift */,
 			);
 			path = Utilities;
@@ -169,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				A17B7F01284652250002C11F /* ImageLoader */,
+				A17B7F0C28467ADC0002C11F /* NoDataView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -180,6 +186,14 @@
 				A17B7F042846527D0002C11F /* ImageLoaderViewModel.swift */,
 			);
 			path = ImageLoader;
+			sourceTree = "<group>";
+		};
+		A17B7F0928466C5B0002C11F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A17B7F0A28466C740002C11F /* UrlExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +275,8 @@
 				11B8AF5128462599005AFB41 /* MovieDbService.swift in Sources */,
 				A17B7EFF284651330002C11F /* MovieRowView.swift in Sources */,
 				11B8AF5928462979005AFB41 /* AppConstants.swift in Sources */,
+				A17B7F0B28466C740002C11F /* UrlExtension.swift in Sources */,
+				A17B7F0D28467ADC0002C11F /* NoDataView.swift in Sources */,
 				11B8AF56284627DD005AFB41 /* ResponseModel.swift in Sources */,
 				A17B7F07284654070002C11F /* ImageLoaderService.swift in Sources */,
 				11B8AF3F284623AE005AFB41 /* PracticalTestApp.swift in Sources */,
