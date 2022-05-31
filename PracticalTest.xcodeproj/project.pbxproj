@@ -33,6 +33,7 @@
 		11B8AF5828462979005AFB41 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		11B8AF5D284630F3005AFB41 /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
 		11B8AF6028463118005AFB41 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		A17B7EFD28464B070002C11F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +66,7 @@
 		11B8AF3D284623AE005AFB41 /* PracticalTest */ = {
 			isa = PBXGroup;
 			children = (
+				A17B7EFD28464B070002C11F /* Info.plist */,
 				11B8AF5A284630BA005AFB41 /* Core */,
 				11B8AF572846293A005AFB41 /* Utilities */,
 				11B8AF5228462644005AFB41 /* Models */,
@@ -362,6 +364,7 @@
 				DEVELOPMENT_TEAM = 33Z26KH6FC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PracticalTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -391,6 +394,7 @@
 				DEVELOPMENT_TEAM = 33Z26KH6FC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PracticalTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

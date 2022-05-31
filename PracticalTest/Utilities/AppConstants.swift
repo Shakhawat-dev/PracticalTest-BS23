@@ -13,5 +13,5 @@ struct AppConstants {
     static private let api_key = "38e61227f85671163c275f9bd95a8803"
     
     // Query Paths
-    static let search = baseUrl + version + "/search/movie?api_key=\(api_key)&query=MOVIE_QUERY"
+    static let search = baseUrl + version + "/search/movie?api_key=\(api_key)&query=marvel"
 }

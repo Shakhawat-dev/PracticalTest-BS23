@@ -11,12 +11,26 @@ struct MoviesView: View {
     @EnvironmentObject private var vm: MoviesViewModel
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            ScrollView() {
+                VStack {
+                    if let movies = vm.movieList?.results {
+                        ForEach(movies, id: \.id) { movie in
+                            Text("\(movie.title ?? "")")
+                        }
+                    }
+                    
+                    
+                }
+            }
+            
+        }
     }
 }
 
 struct MoviesView_Previews: PreviewProvider {
     static var previews: some View {
         MoviesView()
+            .environmentObject(MoviesViewModel())
     }
 }

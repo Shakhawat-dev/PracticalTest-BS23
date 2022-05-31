@@ -14,13 +14,16 @@ class MovieDbService {
     
     var movieSubscription: AnyCancellable?
     
+    init() {
+        self.getCoins()
+    }
+    
     private func getCoins() {
         guard let url = URL(string: AppConstants.search) else { return }
         
         movieSubscription = NetworkManager.download(url: url)
-            .decode(type: ResponseModel<MovieModel>.self
-                    , decoder: JSONDecoder())
-            .sink(receiveCompletion: NetworkManager.handleCompletion, receiveValue: { [weak self] (returnedMovies) in
+            .decode(type: ResponseModel<MovieModel>.self, decoder: JSONDecoder())
+            .sink(receiveCompletion: NetworkManager.handleCompletion, receiveValue: { [weak self] returnedMovies in
                 self?.movieResponse = returnedMovies
             })
     }
