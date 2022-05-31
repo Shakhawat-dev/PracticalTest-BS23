@@ -16,12 +16,13 @@ struct MoviesView: View {
                 VStack {
                     if let movies = vm.movieList?.results {
                         ForEach(movies, id: \.id) { movie in
-                            Text("\(movie.title ?? "")")
+                            MovieRowView(movie: movie)
                         }
                     }
                     
                     
                 }
+                .padding()
             }
             
         }
